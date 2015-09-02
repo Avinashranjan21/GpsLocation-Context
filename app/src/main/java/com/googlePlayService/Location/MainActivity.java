@@ -1,11 +1,16 @@
 package com.googlePlayService.Location;
 
+import android.location.LocationListener;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.gms.common.api.GoogleApiClient;
+
+public class MainActivity extends AppCompatActivity  implements GoogleApiClient.ConnectionCallbacks ,
+        GoogleApiClient.OnConnectionFailedListener,
+        LocationListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
