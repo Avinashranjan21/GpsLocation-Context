@@ -93,8 +93,9 @@ public class MainActivity extends AppCompatActivity  implements GoogleApiClient.
 
     @Override
     public void onLocationChanged(Location location) {
-        Log.i(LOG_TAG,location.toString());
-        txtOutput.setText(location.toString());
+        Log.i(LOG_TAG, location.toString());
+//        txtOutput.setText(location.toString()); // this call is made comment because of unnecessary data provided by location
+        txtOutput.setText(Double.toString(location.getLatitude()));
     }
 
 
